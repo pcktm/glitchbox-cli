@@ -16,6 +16,7 @@ A CLI to glitch video files with code
 <!-- usage -->
 ```sh-session
 $ npm install -g glitchbox-cli
+
 $ glitchbox .\00011.MTS .\testGlitchingFunction.js out.mp4 --noAudio
 > Extract
     √ Load glitching script
@@ -23,8 +24,10 @@ $ glitchbox .\00011.MTS .\testGlitchingFunction.js out.mp4 --noAudio
       Extract feature from file
     Glitch!
     Clean up
+
 $ glitchbox (-v|--version|version)
 glitchbox-cli/1.0.0 win32-x64 node-v12.16.1
+
 $ glitchbox --help
 USAGE
   $ glitchbox INPUT SCRIPT OUTPUT
@@ -38,6 +41,7 @@ OPTIONS
   -h, --help     show CLI help
   -v, --version  show CLI version
   --noAudio      omit audio extraction
+  
 ...
 ```
 <!-- usagestop -->
