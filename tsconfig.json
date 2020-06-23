@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "lib",
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "newLine": "LF",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2019",
+      "esnext.asynciterable"
+    ]
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}

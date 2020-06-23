@@ -1,0 +1,53 @@
+{
+  "name": "glitchbox-cli",
+  "description": "A CLI to glitch video files with code",
+  "version": "1.0.0",
+  "author": "Jakub Kopańko @pcktm",
+  "bin": {
+    "glitchbox": "./bin/run"
+  },
+  "bugs": "https://github.com/pcktm/glitchbox-cli/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "cfonts": "^2.8.1",
+    "del": "^5.1.0",
+    "ffedit-static": "^1.0.0",
+    "glitchbox-core": "^1.0.1",
+    "listr": "^0.14.3",
+    "tempy": "^0.5.0",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@types/node": "^10",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/pcktm/glitchbox-cli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "glitchbox"
+  },
+  "repository": "pcktm/glitchbox-cli",
+  "scripts": {
+    "prepack": "rimraf lib && tsc -b && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "dev": "./bin/run",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
