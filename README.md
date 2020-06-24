@@ -1,4 +1,4 @@
-glitchbox-cli
+🎞️ glitchbox-cli
 =============
 
 A CLI to glitch video files with code
