@@ -1,7 +1,7 @@
 {
   "name": "glitchbox-cli",
   "description": "A CLI to glitch video files with code",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Jakub Kopańko @pcktm",
   "bin": {
     "glitchbox": "./bin/run"
