@@ -40,7 +40,7 @@ ARGUMENTS
 OPTIONS
   -h, --help     show CLI help
   -v, --version  show CLI version
-  --debug,       output some debug info and do not remove the temporary folder
+  --debug        output some debug info and do not remove the temporary folder
   --noAudio      omit audio extraction
   
 ...
