@@ -35,6 +35,7 @@ class GlitchboxCli extends Command {
     version: flags.version({ char: "v" }),
     help: flags.help({ char: "h" }),
     noAudio: flags.boolean({ description: "omit audio extraction" }),
+    debug: flags.boolean({ description: "Output debug info and do not remove the temporary folder" }),
   };
 
   async run() {
@@ -46,6 +47,8 @@ class GlitchboxCli extends Command {
     const glitchManager = new Processor();
 
     const scriptPath = path.resolve(args.script);
+
+    if(flags.debug) console.debug("Temporary directory: " + tempDir)
 
     const tasks = new Listr([
       {
@@ -63,7 +66,10 @@ class GlitchboxCli extends Command {
             {
               title: "Extract audio",
               enabled: () => !flags.noAudio,
-              task: async () => await converter.extractAudio(file),
+              task: async (ctx, task) => await converter.extractAudio(file).catch(() => {
+                flags.noAudio = true;
+                task.skip("Most likely no audio stream in file");
+              }),
             },
             {
               title: "Extract feature from file",
@@ -98,6 +104,7 @@ class GlitchboxCli extends Command {
       },
       {
         title: "Clean up",
+        enabled: () => !flags.debug,
         task: async () => {
           await del([tempDir], {
             force: true,
