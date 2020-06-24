@@ -1,7 +1,7 @@
 {
   "name": "glitchbox-cli",
   "description": "A CLI to glitch video files with code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Jakub Kopańko @pcktm",
   "bin": {
     "glitchbox": "./bin/run"
@@ -44,10 +44,10 @@
   },
   "repository": "pcktm/glitchbox-cli",
   "scripts": {
-    "prepack": "rimraf lib && tsc -b && oclif-dev readme",
+    "prepack": "rimraf lib && tsc -b",
     "test": "echo NO TESTS",
-    "dev": "./bin/run",
-    "version": "oclif-dev readme && git add README.md"
+    "dev": "cross-env ./bin/run",
+    "dist:win": "oclif-dev pack:win"
   },
   "types": "lib/index.d.ts"
 }
