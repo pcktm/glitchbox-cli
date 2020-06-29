@@ -1,4 +1,4 @@
-glitchbox-cli
+🎞️ glitchbox-cli
 =============
 
 A CLI to glitch video files with code
@@ -40,6 +40,7 @@ ARGUMENTS
 OPTIONS
   -h, --help     show CLI help
   -v, --version  show CLI version
+  --debug        output some debug info and do not remove the temporary folder
   --noAudio      omit audio extraction
   
 ...
