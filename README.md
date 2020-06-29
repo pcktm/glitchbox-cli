@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="960" height="540" src="https://github.com/pcktm/glitchbox-cli/raw/master/media/banner.gif">
+</p>
+
 🎞️ glitchbox-cli
 =============
 
